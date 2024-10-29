@@ -1,0 +1,17 @@
+// Data
+const data = [1, 2, 2, 2, 3, 3, 3, 3];
+
+// Fungsi untuk menghitung frekuensi
+function countFrequencies(arr) {
+    const frequency = {};
+    
+    arr.forEach(num => {
+        frequency[num] = (frequency[num] || 0) + 1;
+    });
+    
+    return frequency;
+}
+
+// Menghitung frekuensi dan menampilkan hasil
+const result = countFrequencies(data);
+console.log(result);
