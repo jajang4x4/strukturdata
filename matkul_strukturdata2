@@ -1,0 +1,22 @@
+// Data input
+const data = [1, 2, 2, 3, 3, 4, 5, 5];
+
+// Fungsi untuk menemukan elemen unik
+function findUniqueElements(arr) {
+    const frequency = {};
+    
+    // Menghitung frekuensi setiap elemen
+    arr.forEach(num => {
+        frequency[num] = (frequency[num] || 0) + 1;
+    });
+    
+    // Menyaring elemen yang hanya muncul sekali
+    const uniqueElements = Object.keys(frequency).filter(key => frequency[key] === 1);
+    
+    // Mengubah kembali ke dalam bentuk angka
+    return uniqueElements.map(Number);
+}
+
+// Menemukan dan menampilkan elemen unik
+const uniqueElements = findUniqueElements(data);
+console.log(uniqueElements);
