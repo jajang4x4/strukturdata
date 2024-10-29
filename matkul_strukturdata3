@@ -1,0 +1,12 @@
+// Data input
+const array1 = [7, 8, 9];
+const array2 = [7, 9, 10, 11];
+
+// Fungsi untuk mencari elemen yang sama
+function findSimilarElements(arr1, arr2) {
+    return arr1.filter(element => arr2.includes(element));
+}
+
+// Menemukan dan menampilkan elemen yang sama
+const similarElements = findSimilarElements(array1, array2);
+console.log(similarElements);
